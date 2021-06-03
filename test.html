@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="demo" style="width: 100px;height: 100px;background-color: red"></div>
+<script type="text/javascript" src="./dist/myFunction.js"></script>
+<script>
+    function a(EVENT) {
+        console.log(1111)
+        console.log(this,EVENT)
+    }
+    let demo=document.getElementById('demo')
+    // demo.addEventListener('click',throttle(a,1000))
+    // demo.addEventListener('click',myArr.debounce(a,1000))
+    let obj={
+        "haha":111
+    }
+    myArr.bind(a,obj)(3)
+</script>
+</body>
+</html>
