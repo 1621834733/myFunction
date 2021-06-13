@@ -1,10 +1,13 @@
 {
-  "name": "16218347_utils",
-  "version": "1.0.0",
-  "description": "",
+  "name": "233209_utils",
+  "version": "1.0.1",
+  "description": "自定义函数工具库",
+  "keywords": ["162183","myFunction","gdut","array","object"],
   "main": "dist/myFunction.js",
+  "repository":"https://gitee.com/linlijian/customFunctions.git",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
   },
   "author": "",
   "license": "ISC",

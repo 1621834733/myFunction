@@ -8,17 +8,34 @@
 <div id="demo" style="width: 100px;height: 100px;background-color: red"></div>
 <script type="text/javascript" src="./dist/myFunction.js"></script>
 <script>
-    function a(EVENT) {
+    let b=11
+    let arr=[1,2,3,4,[5,6]]
+    let obj1={a:1,d(){console.log(this)}}
+    let a=function(){
         console.log(1111)
-        console.log(this,EVENT)
     }
-    let demo=document.getElementById('demo')
-    // demo.addEventListener('click',throttle(a,1000))
-    // demo.addEventListener('click',myArr.debounce(a,1000))
-    let obj={
-        "haha":111
-    }
-    myArr.bind(a,obj)(3)
+    // console.log(obj1 instanceof Object)
+    // console.log(obj1 instanceof Function)
+    // console.log(a instanceof Object)
+    // console.log(a instanceof Function)
+    // console.log(arr instanceof Object)
+    // console.log(arr instanceof Function)
+    // console.log(b instanceof Object)
+    // console.log(b instanceof Function)
+
+
+    // let arr1=myArr.copyShallow(arr)
+    // let obj2=myArr.copyShallow(obj1)
+    // arr1[4][0]=10
+    // obj2.a=10
+    // obj2.b=10
+    // console.log(arr,arr1)
+    // console.log(obj1,obj2)
+    // console.log(myArr.copyDeep(obj1))
+    let obj3=myArr.copyDeep(obj1)
+    obj3.a=2
+    console.log(obj3,obj1)
+
 </script>
 </body>
 </html>

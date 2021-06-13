@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+    //继承
+function Father(age,name,sex) {
+    this.age=age
+    this.name=name
+    this.sex=sex
+}
+Father.prototype.voice=function () {
+console.log('this is my voice')
+}
+function Child(age,name,sex) {
+  Father.call(this,age,name,sex)
+}
+function extend(Father) {
+   function Fn() {
+
+   }
+   Fn.prototype=Father.prototype
+    return new Fn()
+}
+    Child.prototype=extend(Father)
+    let child=new Child(18,'linlijlian','man')
+     Child.prototype.constructor=Child
+</script>
+</body>
+</html>
