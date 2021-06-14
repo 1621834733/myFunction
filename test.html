@@ -8,12 +8,12 @@
 <div id="demo" style="width: 100px;height: 100px;background-color: red"></div>
 <script type="text/javascript" src="./dist/myFunction.js"></script>
 <script>
-    let b=11
-    let arr=[1,2,3,4,[5,6]]
-    let obj1={a:1,d(){console.log(this)}}
-    let a=function(){
-        console.log(1111)
-    }
+    // let b=11
+    // let arr=[1,2,3,4,[5,6]]
+    // let obj1={a:1,d(){console.log(this)}}
+    // let a=function(){
+    //     console.log(1111)
+    // }
     // console.log(obj1 instanceof Object)
     // console.log(obj1 instanceof Function)
     // console.log(a instanceof Object)
@@ -32,10 +32,52 @@
     // console.log(arr,arr1)
     // console.log(obj1,obj2)
     // console.log(myArr.copyDeep(obj1))
-    let obj3=myArr.copyDeep(obj1)
-    obj3.a=2
-    console.log(obj3,obj1)
+    // let obj3=myArr.copyDeep(obj1)
+    // obj3.a=2
+    // console.log(obj3,obj1)
+    // console.log(myArr.stack)
+    // let queue=new myArr.queue()
+    // console.log(queue)
 
+
+    //queue Test
+    // let queue=new myArr.queue()
+    // queue.enQueue(1)
+    // queue.enQueue(2)
+    // queue.enQueue(3)
+    // queue.enQueue(4)
+    // queue.enQueue(5)
+    // queue.enQueue(6)
+    // while(queue.size>1){
+    //     for(let i=0;i<4;i++){
+    //         if(i<3) {
+    //             queue.enQueue(queue.outQueue())
+    //         }else {
+    //             queue.outQueue()
+    //         }
+    //     }
+    // }
+    // alert(queue.front())
+
+    // //priorityQueue Test
+    // let queue=new myArr.priorityQueue()
+    // queue.enQueue(1,10)
+    // queue.enQueue(1,1)
+    // queue.enQueue(1,18)
+    // console.log(queue.front())
+
+    class Person {
+        constructor(age,name,sex) {
+            this.age=age
+            this.name=name
+            this.sex=sex
+        }
+        voice(){
+            console.log(this)
+        }
+    }
+    let person = new Person(18,'lin','man')
+    console.log(person)
 </script>
 </body>
 </html>
